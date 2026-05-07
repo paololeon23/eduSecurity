@@ -25,7 +25,8 @@
   }
 
   function openWhatsApp(text) {
-    window.open(waUrl(text), "_blank", "noopener,noreferrer");
+    /* Misma pestaña: en móvil, _blank deja una pestaña vacía (about:blank) al abrir la app */
+    window.location.assign(waUrl(text));
   }
 
   /** Fotos locales en /img · campo ref solo uso interno / compatibilidad */
@@ -226,15 +227,6 @@
     return products.find((p) => p.id === id);
   }
 
-  function optionValuesLine(p) {
-    const parts = [];
-    (p.options || []).forEach((g) => {
-      const v = modalSelections[g.key];
-      if (v) parts.push(v);
-    });
-    return parts.join(", ");
-  }
-
   function optionSubtitle(p) {
     const parts = [];
     (p.options || []).forEach((g) => {
@@ -272,30 +264,45 @@
 
   /** WhatsApp: poca decoración · negritas *así* y viñetas (sin iconos) */
   function messageSingleProduct(p, qty) {
-    const opts = optionValuesLine(p);
     const unit = Number(p.price);
     const sub = Math.round(unit * qty * 100) / 100;
-    const lines = [`*${BRAND}*`, "", `*Pedido (${qty} u.)*`, ""];
+    const lines = [`*${BRAND}*`, `*Pedido · ${qty} u.*`, ""];
     lines.push(`- *${p.name}*`, `  Modelo: ${p.ref}`);
-    if (opts) lines.push(`  Opciones: ${opts}`);
-    lines.push(`  Cantidad: ${qty}`, `  P. unit.: ${money(unit)}`, `  Subtotal: ${money(sub)}`);
-    lines.push("", "*Total a pagar (soles):*", money(sub));
-    lines.push("", SHIPPING_NOTE);
+    const optLine = optionSubtitle(p);
+    if (optLine) {
+      optLine.split(" · ").forEach((bit) => lines.push(`  ${bit.trim()}`));
+    }
+    lines.push(
+      `  Cant.: ${qty}`,
+      `  P. unit.: ${money(unit)}`,
+      `  Subtotal: ${money(sub)}`
+    );
+    lines.push("", "*Total (soles):*", money(sub));
     return lines.join("\n");
   }
 
   function messageCart() {
     const units = cartTotalUnits();
-    const parts = [`*${BRAND}*`, "", `*Resumen (${units} unidades)*`, ""];
+    const parts = [
+      `*${BRAND}*`,
+      `*Pedido · ${units} u.*`,
+      "",
+    ];
     cartItems.forEach((i) => {
       const q = Number(i.qty) || 1;
       const sub = Math.round(Number(i.price) * q * 100) / 100;
       parts.push(`- *${i.name}*`, `  Modelo: ${i.ref}`);
-      if (i.subtitle) parts.push(`  ${i.subtitle.replace(/ · /g, " · ")}`);
-      parts.push(`  Cantidad: ${q}`, `  P. unit.: ${money(i.price)}`, `  Subtotal: ${money(sub)}`, "");
+      if (i.subtitle) {
+        i.subtitle.split(" · ").forEach((line) => parts.push(`  ${line.trim()}`));
+      }
+      parts.push(
+        `  Cant.: ${q}`,
+        `  P. unit.: ${money(i.price)}`,
+        `  Subtotal: ${money(sub)}`,
+        ""
+      );
     });
-    parts.push("*Total a pagar (soles):*", money(cartTotalNumber()));
-    parts.push("", SHIPPING_NOTE);
+    parts.push("*Total (soles):*", money(cartTotalNumber()));
     return parts.join("\n");
   }
 
@@ -477,7 +484,7 @@
       cartCount.hidden = false;
       cartCount.textContent = String(units);
       cartDrawerTitle.textContent = `Tu carrito · ${units} unidad${units === 1 ? "" : "es"}`;
-      cartSummaryLine.textContent = `Soles · envío nacional · confirma en WhatsApp`;
+      cartSummaryLine.textContent = `Total en soles · enviar pedido por WhatsApp`;
     }
 
     cartTotal.textContent = money(total);

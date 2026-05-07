@@ -1110,9 +1110,11 @@ button {
 }
 
 .legal-modal {
-  width: min(640px, 94vw);
-  max-height: min(88vh, 760px);
-  margin: auto;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
   padding: 0;
   border: none;
   background: transparent;
@@ -1123,20 +1125,61 @@ button {
 }
 
 .legal-modal__surface {
+  width: min(640px, 94vw);
+  margin: auto;
   background: linear-gradient(165deg, var(--navy-800), var(--navy-950));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  position: relative;
   max-height: min(88vh, 760px);
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: 720px) {
+  .legal-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: max(2vh, 1rem);
+    box-sizing: border-box;
+  }
+  .legal-modal__surface {
+    margin-block: auto;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 719px) {
+  .legal-modal__surface {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.legal-modal__head {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.legal-modal__head-pad {
+  display: block;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
 .legal-modal__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: static;
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -1147,6 +1190,13 @@ button {
   line-height: 1;
   cursor: pointer;
   z-index: 2;
+  justify-self: end;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  padding: 0;
 }
 .legal-modal__close:hover {
   border-color: var(--yellow-400);
@@ -1155,11 +1205,12 @@ button {
 
 .legal-modal__title {
   margin: 0;
-  padding: 1.35rem 3rem 0.75rem 1.35rem;
+  padding: 0 0.25rem;
   font-size: 1.2rem;
   letter-spacing: -0.02em;
+  text-align: center;
+  text-wrap: balance;
   color: var(--yellow-400);
-  border-bottom: 1px solid var(--line);
 }
 
 .legal-modal__body {
@@ -1342,6 +1393,20 @@ button {
   overflow-y: auto;
 }
 
+@media (min-width: 720px) {
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: max(2vh, 1rem);
+    box-sizing: border-box;
+  }
+  .modal__surface {
+    margin-block: auto;
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 719px) {
   .modal__surface {
     width: 100%;
@@ -1362,6 +1427,12 @@ button {
   }
 }
 
+.close-glyph {
+  display: block;
+  line-height: 1;
+  transform: translateY(-0.1em);
+}
+
 .modal__close {
   position: absolute;
   top: 12px;
@@ -1377,6 +1448,11 @@ button {
   cursor: pointer;
   z-index: 2;
   transition: border-color 0.25s, color 0.25s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  padding: 0;
 }
 .modal__close:hover {
   border-color: var(--yellow-400);
@@ -1391,6 +1467,7 @@ button {
 @media (min-width: 720px) {
   .modal__grid {
     grid-template-columns: 1fr 1fr;
+    align-items: stretch;
   }
 }
 
@@ -1400,7 +1477,6 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0.65rem 0.5rem;
-  align-self: start;
 }
 .modal__media img {
   width: 100%;
@@ -1411,8 +1487,18 @@ button {
   border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
+@media (min-width: 720px) {
+  .modal__media {
+    padding: 1.25rem 1rem;
+  }
+  .modal__media img {
+    max-height: min(68vh, 520px);
+  }
+}
+
 @media (max-width: 719px) {
   .modal__media {
+    align-self: start;
     padding: 0.75rem 0.65rem 0.35rem;
   }
   .modal__media img {
