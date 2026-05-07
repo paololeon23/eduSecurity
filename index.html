@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="eduSegurity — EPP certificados en soles. Envío a nivel nacional en todo el Perú." />
+  <title>eduSegurity | EPP industrial</title>
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="any" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="header" id="inicio">
+    <div class="header__inner">
+      <a href="#inicio" class="logo" aria-label="eduSegurity inicio">
+        <span class="logo__mark" aria-hidden="true">
+          <img class="logo__img" src="img/logo.png" width="24" height="24" alt="" decoding="async" />
+        </span>
+        <span class="logo__text">edu<span class="logo__accent">Segurity</span></span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#productos" class="nav__link">Productos</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <div class="nav__actions">
+          <button type="button" class="btn-icon cart-trigger" id="cartTrigger" aria-label="Abrir carrito">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>
+            </svg>
+            <span class="cart-trigger__badge" id="cartCount" hidden>0</span>
+          </button>
+          <a href="#productos" class="btn btn--primary btn--sm">Comprar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__bg">
+        <img src="assets/hero-edusecurity.webp" alt="" class="hero__img" width="1920" height="800" fetchpriority="high" decoding="async" />
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow animate-in" data-animate>Seguridad industrial · Certificaciones internacionales</p>
+        <h1 id="heroTitle" class="hero__title animate-in" data-animate>
+          Protege tu vida con equipos de calidad
+        </h1>
+        <p class="hero__lead animate-in" data-animate>
+          Precios en soles (PEN) y despacho coordinado a nivel nacional en todo el Perú: equipá a tu equipo con los mejores EPP del mercado.
+        </p>
+        <div class="hero__cta animate-in" data-animate>
+          <a href="#productos" class="btn btn--primary btn--lg">Ver productos</a>
+          <a class="btn btn--ghost btn--lg" href="https://wa.me/51913420257?text=Hola%20eduSegurity%2C%20quiero%20cotizar%20EPP." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <ul class="hero__stats animate-in" data-animate role="list">
+          <li><strong>+12k</strong> equipos entregados</li>
+          <li><strong>24h</strong> respuesta comercial</li>
+          <li><strong>100%</strong> trazabilidad</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-labelledby="trustTitle">
+      <div class="container">
+        <h2 id="trustTitle" class="visually-hidden">Compra segura — datos verificados</h2>
+        <ul class="trust-strip__grid" role="list">
+          <li class="trust-item animate-in" data-animate>
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="trust-item__body">
+              <strong class="trust-item__k">Certificación · trazabilidad</strong>
+              <span class="trust-item__v">EPP con ficha técnica, lote y declaración de conformidad (DAC) digital.</span>
+            </div>
+          </li>
+          <li class="trust-item animate-in" data-animate>
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            </div>
+            <div class="trust-item__body">
+              <strong class="trust-item__k">Referencias normativas</strong>
+              <span class="trust-item__v">Productos según ASTM / ANSI / EN indicados por ítem · certificados disponibles previa solicitud.</span>
+            </div>
+          </li>
+          <li class="trust-item animate-in" data-animate>
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h5l3 5v9a2 2 0 0 1-2 2h-5M16 8v13a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h13"/></svg>
+            </div>
+            <div class="trust-item__body">
+              <strong class="trust-item__k">Envío nacional</strong>
+              <span class="trust-item__v">Despachos a nivel nacional: Lima, costa, sierra y selva. Coordinación y seguimiento.</span>
+            </div>
+          </li>
+          <li class="trust-item animate-in" data-animate>
+            <div class="trust-item__icon trust-item__icon--wa" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="trust-item__body">
+              <strong class="trust-item__k">Pedidos por WhatsApp</strong>
+              <span class="trust-item__v">Tu pedido en soles y envío nacional va en un mensaje: ítems, opciones elegidas y total.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section products" id="productos" aria-labelledby="productsTitle">
+      <div class="container">
+        <header class="section__head animate-in" data-animate>
+          <span class="section__tag">Catálogo</span>
+          <h2 id="productsTitle" class="section__title">Productos destacados</h2>
+          <p class="section__desc">Precios en soles (PEN). Catálogo certificado con envío coordinado a nivel nacional en todo el Perú.</p>
+        </header>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="section benefits" aria-labelledby="benefitsTitle">
+      <div class="container">
+        <header class="section__head section__head--center animate-in" data-animate>
+          <span class="section__tag">Por qué eduSegurity</span>
+          <h2 id="benefitsTitle" class="section__title">Beneficios que marcan la diferencia</h2>
+        </header>
+        <ul class="benefit-grid" role="list">
+          <li class="benefit-card animate-in" data-animate>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Productos certificados</h3>
+            <p class="benefit-card__text">Normas internacionales y documentación de trazabilidad lista para auditorías.</p>
+          </li>
+          <li class="benefit-card animate-in" data-animate>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Alta calidad</h3>
+            <p class="benefit-card__text">Materiales resistentes, ergonomía mejorada y acabados de grado profesional.</p>
+          </li>
+          <li class="benefit-card animate-in" data-animate>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Entrega rápida</h3>
+            <p class="benefit-card__text">Coordinamos despacho a nivel nacional con seguimiento en tiempo real.</p>
+          </li>
+          <li class="benefit-card animate-in" data-animate>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Atención personalizada</h3>
+            <p class="benefit-card__text">Asesoría técnica para elegir tallas, normativas y paquetes corporativos.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros" aria-labelledby="aboutTitle">
+      <div class="container about__shell">
+        <div class="about__layout">
+          <div class="about__visual animate-in" data-animate>
+            <img
+              class="about__img"
+              src="img/edusecutiry.png"
+              alt="eduSegurity — equipamiento de protección industrial en Perú"
+              width="640"
+              height="420"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about__img-overlay" aria-hidden="true"></div>
+            <div class="about__panel">
+              <span class="about__badge">Perú · 2026</span>
+              <p class="about__panel-text">Seguridad no es negociable.<br/><strong>Innovamos contigo.</strong></p>
+            </div>
+          </div>
+          <div class="about__copy">
+            <header class="section__head animate-in" data-animate>
+              <span class="section__tag">Nosotros</span>
+              <h2 id="aboutTitle" class="section__title">eduSegurity, tu socio en protección industrial</h2>
+            </header>
+            <div class="about__cards">
+              <article class="about-card animate-in" data-animate>
+                <h3 class="about-card__label">Misión</h3>
+                <p>Brindar equipos de protección personal de alta calidad que garanticen la seguridad y bienestar de nuestros clientes.</p>
+              </article>
+              <article class="about-card animate-in" data-animate>
+                <h3 class="about-card__label">Visión</h3>
+                <p>Ser líderes en el mercado de seguridad industrial, innovando continuamente en soluciones de protección.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="testTitle">
+      <div class="container">
+        <header class="section__head section__head--center animate-in" data-animate>
+          <span class="section__tag">Historias</span>
+          <h2 id="testTitle" class="section__title">Lo que dicen nuestros clientes</h2>
+        </header>
+        <div class="testimonial-marquee" aria-label="Opiniones de clientes en movimiento continuo">
+          <div class="testimonial-marquee__viewport">
+            <div class="testimonial-marquee__track">
+              <div class="testimonial-marquee__slide">
+                <figure class="testimonial">
+                  <blockquote>“Equipamos dos plantas en tiempo récord. Calidad TOP y equipo comercial muy claro.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Diego Ramos</cite>
+                      <span>Jefe SST · Sector minero</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide">
+                <figure class="testimonial">
+                  <blockquote>“Los chalecos reflectivos cumplieron norma sin reprocesos. Repetimos pedido mensual.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Valeria Quispe</cite>
+                      <span>Logística · Retail</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide">
+                <figure class="testimonial">
+                  <blockquote>“Entrega a provincia impecable. Botas y lentes cerraron nuestra auditoría sin observaciones.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Carlos Mendieta</cite>
+                      <span>Director Operaciones · Construcción</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide">
+                <figure class="testimonial">
+                  <blockquote>“Guantes y delantales para línea continua: lotes homogéneos y documentación lista para ISO.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Andrea Torres</cite>
+                      <span>Calidad · Industria alimentaria</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide">
+                <figure class="testimonial">
+                  <blockquote>“Cotización por WhatsApp clara y despacho nacional sin sorpresas. Socio EPP de confianza.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Marco Ruiz</cite>
+                      <span>Compras · Energía</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <!-- Duplicado para carrusel infinito -->
+              <div class="testimonial-marquee__slide" aria-hidden="true">
+                <figure class="testimonial">
+                  <blockquote>“Equipamos dos plantas en tiempo récord. Calidad TOP y equipo comercial muy claro.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Diego Ramos</cite>
+                      <span>Jefe SST · Sector minero</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide" aria-hidden="true">
+                <figure class="testimonial">
+                  <blockquote>“Los chalecos reflectivos cumplieron norma sin reprocesos. Repetimos pedido mensual.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Valeria Quispe</cite>
+                      <span>Logística · Retail</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide" aria-hidden="true">
+                <figure class="testimonial">
+                  <blockquote>“Entrega a provincia impecable. Botas y lentes cerraron nuestra auditoría sin observaciones.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Carlos Mendieta</cite>
+                      <span>Director Operaciones · Construcción</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide" aria-hidden="true">
+                <figure class="testimonial">
+                  <blockquote>“Guantes y delantales para línea continua: lotes homogéneos y documentación lista para ISO.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Andrea Torres</cite>
+                      <span>Calidad · Industria alimentaria</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testimonial-marquee__slide" aria-hidden="true">
+                <figure class="testimonial">
+                  <blockquote>“Cotización por WhatsApp clara y despacho nacional sin sorpresas. Socio EPP de confianza.”</blockquote>
+                  <figcaption>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&q=80" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <div>
+                      <cite>Marco Ruiz</cite>
+                      <span>Compras · Energía</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="ctaTitle">
+      <div class="container cta-banner__inner animate-in" data-animate>
+        <div>
+          <h2 id="ctaTitle" class="cta-banner__title">Equípate hoy y trabaja seguro</h2>
+          <p class="cta-banner__text">Bolsa corporativa, campañas de inducción y kits listos para tu brigada.</p>
+        </div>
+        <a href="https://wa.me/51913420257?text=Quiero%20equipamiento%20eduSegurity.%20%E2%80%94%20cotizaci%C3%B3n" class="btn btn--accent btn--lg" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contactTitle">
+      <div class="container contact__grid">
+        <div>
+          <header class="section__head animate-in" data-animate>
+            <span class="section__tag">Contacto</span>
+            <h2 id="contactTitle" class="section__title">Hablemos de tu proyecto</h2>
+            <p class="section__desc">Completa el formulario o escríbenos por WhatsApp. Respondemos desde Lima.</p>
+          </header>
+
+          <form class="contact-form animate-in" id="contactForm" data-animate>
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Tu nombre o empresa" />
+            </div>
+            <div class="field">
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="nombre@correo.com" />
+            </div>
+            <div class="field">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos volumen, productos y ciudad de entrega"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+            <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact__map animate-in" data-animate>
+          <div class="map-card">
+            <h3 class="map-card__title">Ubicación · Perú</h3>
+            <p class="map-card__addr">Av. Javier Prado Este 4200<br />San Borja · Lima</p>
+            <div class="map-card__embed">
+              <iframe
+                title="Mapa Lima Perú — eduSegurity"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-77.0012%2C-12.1059%2C-76.9855%2C-12.0936&amp;layer=mapnik&amp;marker=-12.09975,-76.99335">
+              </iframe>
+            </div>
+            <p class="map-card__note">Horario: Lun–Vie 9:00–18:00 (PET)</p>
+            <div class="contact__actions">
+              <a class="btn btn--whatsapp btn--full" href="https://wa.me/51913420257?text=Hola%20eduSegurity%2C%20quiero%20EPP." target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp · Ventas
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product modal -->
+  <dialog class="modal" id="productModal" aria-labelledby="modalTitle">
+    <div class="modal__surface">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Cerrar detalle">&times;</button>
+      <div class="modal__grid">
+        <div class="modal__media">
+          <img src="" alt="" id="modalImg" width="560" height="420" />
+        </div>
+        <div class="modal__body">
+          <h2 id="modalTitle" class="modal__title"></h2>
+          <p class="modal__price" id="modalPrice"></p>
+          <p class="modal__price-note">Precio en soles · PEN</p>
+          <dl class="modal__meta" id="modalMeta" hidden></dl>
+          <p class="modal__desc" id="modalDesc"></p>
+          <div class="modal__options" id="modalOptions"></div>
+          <div class="modal__qty-wrap" id="modalQtyWrap">
+            <span class="option-group__label">Cantidad</span>
+            <div class="qty-stepper" role="group" aria-label="Cantidad de unidades">
+              <button type="button" class="qty-stepper__btn" id="modalQtyMinus" aria-label="Reducir cantidad">−</button>
+              <input type="number" class="qty-stepper__input" id="modalQtyInput" min="1" max="999" value="1" inputmode="numeric" aria-live="polite" />
+              <button type="button" class="qty-stepper__btn" id="modalQtyPlus" aria-label="Aumentar cantidad">+</button>
+            </div>
+          </div>
+          <div class="modal__footer">
+            <button type="button" class="btn btn--primary" id="modalAddCart">Al carrito</button>
+            <button type="button" class="btn btn--ghost" id="modalBuy">WhatsApp · pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Cart drawer -->
+  <div class="drawer" id="cartDrawer" hidden>
+    <div class="drawer__backdrop" id="cartBackdrop"></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+      <div class="drawer__head">
+        <h2 id="cartDrawerTitle" class="drawer__title">Tu carrito · 0 ítems</h2>
+        <button type="button" class="btn-icon" id="cartClose" aria-label="Cerrar carrito">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="drawer__list" id="cartList"></ul>
+      <div class="drawer__empty" id="cartEmpty">Tu carrito está vacío.</div>
+      <div class="drawer__footer" id="cartFooter" hidden>
+        <div class="drawer__total">
+          <span>Total (soles)</span>
+          <strong id="cartTotal">S/ 0.00 soles</strong>
+        </div>
+        <p class="drawer__subtotal" id="cartSummaryLine" aria-live="polite"></p>
+        <button type="button" class="btn btn--whatsapp btn--full" id="checkoutBtn">WhatsApp — enviar pedido</button>
+        <p class="drawer__note">Precios en soles. Envío a nivel nacional — Perú.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Carrito flotante (móvil): resumen rápido antes de abrir el panel -->
+  <div class="cart-dock" id="cartDock" hidden>
+    <button type="button" class="cart-dock__btn" id="cartDockBtn">
+      <span class="cart-dock__badge" id="cartDockBadge" aria-hidden="true">0</span>
+      <span class="cart-dock__ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/></svg>
+      </span>
+      <span class="cart-dock__middle">
+        <span class="cart-dock__strong" id="cartDockHead">Tu pedido</span>
+        <span class="cart-dock__sub" id="cartDockLine">0 productos · abre para ver los detalles</span>
+      </span>
+      <span class="cart-dock__end">
+        <span class="cart-dock__amt" id="cartDockAmount">S/ 0.00</span>
+        <span class="cart-dock__cta">Ver resumen</span>
+      </span>
+    </button>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo logo--footer">
+          <span class="logo__mark" aria-hidden="true">
+            <img class="logo__img" src="img/logo.png" width="24" height="24" alt="" decoding="async" />
+          </span>
+          <span class="logo__text">edu<span class="logo__accent">Segurity</span></span>
+        </a>
+        <p>EPP certificados para equipos que no se detienen.</p>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+          <li><a href="#" aria-label="Instagram">ig</a></li>
+          <li><a href="#" aria-label="Facebook">fb</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title">Enlaces rápidos</h3>
+        <ul class="footer__links">
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title">Legal</h3>
+        <ul class="footer__links">
+          <li><button type="button" class="footer__legal-btn" data-legal-open="terms">Términos del servicio</button></li>
+          <li><button type="button" class="footer__legal-btn" data-legal-open="privacy">Privacidad</button></li>
+          <li><button type="button" class="footer__legal-btn" data-legal-open="returns">Cambios y devoluciones</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> eduSegurity. Todos los derechos reservados.</p>
+        <p class="footer__tag">eduSegurity · Perú · Precios en soles · Envío a nivel nacional</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="legal-modal" id="dialogLegalTerms" aria-labelledby="legalTermsHeading">
+    <div class="legal-modal__surface">
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="Cerrar">&times;</button>
+      <h2 id="legalTermsHeading" class="legal-modal__title">Términos del servicio</h2>
+      <div class="legal-modal__body">
+        <p><strong>eduSegurity</strong> ofrece equipos de protección personal (EPP) y productos afines en el Perú. Al usar este sitio, cotizar o comprar, aceptas estos términos.</p>
+        <h3>Alcance</h3>
+        <p>Los precios se muestran en soles (PEN). Las descripciones técnicas y normas citadas son referenciales según fabricante y empaque; la conformidad final depende del uso correcto del producto y de la documentación que entrega el proveedor con cada pedido.</p>
+        <h3>Pedidos y cotizaciones</h3>
+        <p>Los pedidos por WhatsApp u otros canales indicados son cotizaciones y coordinaciones comerciales. La disponibilidad de stock, tallas y colores se confirma al momento de formalizar el pedido. eduSegurity puede rechazar o diferir pedidos por causas de fuerza mayor o indisponibilidad.</p>
+        <h3>Documentación</h3>
+        <p>Fichas técnicas, declaraciones de conformidad u otros documentos se entregan según lo pactado por canal de venta y tipo de producto. Es responsabilidad del cliente revisar tallas, normativa aplicable a su actividad y uso adecuado del EPP.</p>
+        <h3>Limitación de responsabilidad</h3>
+        <p>eduSegurity no se hace responsable por daños derivados de un uso indebido del EPP, manipulación no autorizada, o por incumplimiento de las instrucciones del fabricante. El cliente es responsable de cumplir la normativa de seguridad y salud en su sector.</p>
+        <h3>Ley aplicable</h3>
+        <p>Estos términos se interpretan según las leyes de la República del Perú. Las controversias se someten a los tribunales competentes del Perú, salvo norma imperativa en contrario.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="legal-modal" id="dialogLegalPrivacy" aria-labelledby="legalPrivacyHeading">
+    <div class="legal-modal__surface">
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="Cerrar">&times;</button>
+      <h2 id="legalPrivacyHeading" class="legal-modal__title">Política de privacidad</h2>
+      <div class="legal-modal__body">
+        <p><strong>eduSegurity</strong> trata tus datos con fines comerciales y de atención al cliente, de forma transparente y proporcional.</p>
+        <h3>Datos que podemos recibir</h3>
+        <ul>
+          <li>Nombre o razón social, correo, teléfono y ciudad de entrega cuando nos escribes por formulario o WhatsApp.</li>
+          <li>Datos necesarios para cotizar, despachar y dar soporte (productos, cantidades, tallas).</li>
+        </ul>
+        <h3>Finalidad</h3>
+        <ul>
+          <li>Responder solicitudes, emitir cotizaciones y coordinar envíos a nivel nacional.</li>
+          <li>Mejorar la experiencia en el sitio y cumplir obligaciones legales aplicables.</li>
+        </ul>
+        <h3>Conservación</h3>
+        <p>Conservamos la información el tiempo necesario para las finalidades indicadas y los plazos legales. Los mensajes en WhatsApp dependen también de las políticas de la plataforma Meta.</p>
+        <h3>Derechos del titular</h3>
+        <p>Puedes solicitar acceso, rectificación o cancelación de tus datos personales según la Ley N.º 29733 y su reglamento, escribiendo al canal de contacto indicado en la web. No vendemos tus datos a terceros para fines ajenos a la relación comercial.</p>
+        <h3>Cookies y navegación</h3>
+        <p>Este sitio puede usar tecnologías estándar necesarias para su funcionamiento. Si en el futuro se incorporan cookies analíticas, se informará en esta política.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="legal-modal" id="dialogLegalReturns" aria-labelledby="legalReturnsHeading">
+    <div class="legal-modal__surface">
+      <button type="button" class="legal-modal__close" data-legal-close aria-label="Cerrar">&times;</button>
+      <h2 id="legalReturnsHeading" class="legal-modal__title">Cambios y devoluciones</h2>
+      <div class="legal-modal__body">
+        <p>Estas condiciones buscan dejar claro qué esperar al comprar EPP con <strong>eduSegurity</strong>. Los detalles concretos de tu pedido se confirman por WhatsApp o canal oficial antes del despacho.</p>
+        <h3>Productos de uso y seguridad</h3>
+        <p>Por la naturaleza del producto (EPP), los cambios y devoluciones están sujetos a que el artículo esté sin uso, con empaque y etiquetas originales, y sin alteraciones que impidan su recomercialización conforme a políticas de higiene y seguridad.</p>
+        <h3>Plazos</h3>
+        <p>Debes informar la solicitud dentro de un plazo razonable desde la recepción, coordinando por el mismo canal de compra. Los plazos exactos y excepciones se pactan caso por caso según tipo de producto y transporte.</p>
+        <h3>Envíos y provincias</h3>
+        <p>Los envíos se coordinan a nivel nacional en el Perú. Costos y tiempos dependen de destino y transportista. Daños por transporte deben reportarse con evidencia (fotos, guía) para gestionar con el carrier según corresponda.</p>
+        <h3>Producto defectuoso o inconforme</h3>
+        <p>Si recibes un artículo que no coincide con lo cotizado o presenta defecto de fábrica aparente, comunícalo de inmediato. eduSegurity evaluará la reposición, cambio o nota de crédito según corresponda y según disponibilidad del fabricante.</p>
+        <h3>Restricciones</h3>
+        <p>No proceden devoluciones por uso indebido, talla elegida incorrectamente cuando la opción fue confirmada por el cliente, o cuando el fabricante no admite devolución por política sanitaria o de traceabilidad.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
